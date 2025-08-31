@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MeetLess - Meeting ROI Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📊 MeetLess</h1>
+
+  <section>
+    <h2>Create Meeting</h2>
+    <input id="title" placeholder="Meeting Title">
+    <input id="duration" type="number" placeholder="Duration (hours)">
+    <button onclick="createMeeting()">Create</button>
+  </section>
+
+  <section>
+    <h2>Give Feedback</h2>
+    <input id="meetingId" placeholder="Meeting ID">
+    <button onclick="feedback(true)">✅ Useful</button>
+    <button onclick="feedback(false)">❌ Not Useful</button>
+  </section>
+
+  <section>
+    <h2>Dashboard</h2>
+    <button onclick="loadDashboard()">Refresh Dashboard</button>
+    <pre id="dashboard"></pre>
+    <canvas id="chart" width="400" height="200"></canvas>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
